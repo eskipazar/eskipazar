@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eski Pazar</title>
+
+    <style>
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+
+      @-moz-keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+
+      @-webkit-keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+
+      @-o-keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+
+      @-ms-keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+
+      body {
+        font-family: monospace;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+      hr {
+        border-style: dashed;
+        border-width: 2px;
+      }
+
+      .header-title,
+      .header-navigation {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .header-navigation > a {
+        cursor: pointer;
+      }
+
+      .poster {
+        width: 100%;
+        animation: 1s ease-out 0s 1 fadeIn;
+      }
+
+      .content {
+        margin-bottom: 30px;
+      }
+
+      iframe {
+        border: none;
+        width: 100%;
+        height: 100%;
+      }
+
+      @media screen and (max-width: 660px) {
+        body {
+          padding: 0 10px;
+        }
+        .poster {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h2>Eski Pazar</h2>
+      <span>About eski pazar content</span>
+    </header>
+    <hr />
+    <div class="header-title">
+      <h3 id="title"></h3>
+      <span id="date"></span>
+    </div>
+    <div class="content" id="content"></div>
+    <div class="header-navigation">
+      <a id="prev-button">Pre Exhibition</a>
+      <a id="next-button">Next Exhibition</a>
+    </div>
+    <hr />
+    <h3>Contact</h3>
+    <p>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas minima
+      itaque nemo voluptatem rem iste iusto dolore, maiores adipisci quia
+      exercitationem et deleniti corporis cupiditate animi modi distinctio
+      repellendus perferendis.
+    </p>
+  </body>
+</html>
+
+<script>
+  const list = [
+    {
+      title: "Mağara",
+      date: "1-30 November",
+      content: `<p>
+        <img
+    src="https://static.wikia.nocookie.net/lotr/images/e/e0/East-gate_of_Moria.png/revision/latest?cb=20181027033459"
+    class="poster"
+  />
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores officiis
+  perspiciatis distinctio cum magnam inventore repellendus quisquam optio
+  architecto sint voluptates, quam asperiores earum eligendi cumque aperiam
+  nesciunt. Eius, voluptas. <br />
+
+  </p>`,
+    },
+    {
+      title: "Duvar",
+      date: "1-30 December",
+      content: `<p>
+  <img
+    src="https://s2.best-wallpaper.net/wallpaper/1920x1080/1706/Abstract-cave-lines-creative_1920x1080.jpg"
+    class="poster"
+  />
+  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores officiis
+  perspiciatis distinctio cum magnam inventore repellendus quisquam optio
+  architecto sint voluptates, quam asperiores earum eligendi cumque aperiam
+  nesciunt. Eius, voluptas. <br />
+  <br />
+  <img src="https://thumbs.dreamstime.com/b/abstract-light-cave-background-abstract-light-cave-background-rock-texture-157386171.jpg" class="poster">
+  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores officiis
+  perspiciatis distinctio cum magnam inventore repellendus quisquam optio
+  architecto sint voluptates, quam asperiores earum eligendi cumque aperiam
+  nesciunt. Eius, voluptas. <br />
+  </p>`,
+    },
+    {
+      title: "Apartman",
+      date: "1-30 January",
+      content: `<p>
+        <img
+    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzKTqy9TVn-DybrovPuxRpBoduYqVx_arpqTi5YW-v5mUBdIYlV41ypKAc9vfR8Qyhmxs&usqp=CAU"
+    class="poster"
+  />
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores officiis
+  perspiciatis distinctio cum magnam inventore repellendus quisquam optio
+  architecto sint voluptates, quam asperiores earum eligendi cumque aperiam
+  nesciunt. Eius, voluptas. <br />
+
+  </p>`,
+    },
+  ];
+
+  document.getElementById("next-button").addEventListener("click", handleNext);
+  document.getElementById("prev-button").addEventListener("click", handlePrev);
+
+  let currentKey = 1;
+
+  const setContent = () => {
+    const current = list[currentKey];
+    const content = document.getElementById("content");
+    const title = document.getElementById("title");
+    const date = document.getElementById("date");
+    if (content) {
+      content.innerHTML = current.content;
+      title.innerText = current.title;
+      date.innerText = current.date;
+    }
+  };
+
+  function handleNext(e) {
+    if (currentKey === 0) {
+      console.log("next");
+      return null;
+    }
+    currentKey -= 1;
+    setContent();
+  }
+
+  function handlePrev(e) {
+    if (currentKey === list.length - 1) {
+      return null;
+    }
+    currentKey += 1;
+    setContent();
+  }
+
+  setContent();
+</script>
