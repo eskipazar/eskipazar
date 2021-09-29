@@ -62,6 +62,11 @@
         border-width: 2px;
       }
 
+      .arrow-button {
+        padding: 5px 10px;
+        border: 1px solid;
+      }
+
       .header-title,
       .header-navigation {
         display: flex;
@@ -111,8 +116,8 @@
     </div>
     <div class="content" id="content"></div>
     <div class="header-navigation">
-      <a id="prev-button">Pre Exhibition</a>
-      <a id="next-button">Next Exhibition</a>
+      <a id="prev-button" class="arrow-button">Pre Exhibition</a>
+      <a id="next-button" class="arrow-button">Next Exhibition</a>
     </div>
     <hr />
     <h3>Contact</h3>
@@ -128,14 +133,20 @@
 <script>
   const list = [
     {
-      title: "Mağara",
+      title: "Cave",
       date: "1-30 November",
       content: `<p>
         <img
-    src="https://static.wikia.nocookie.net/lotr/images/e/e0/East-gate_of_Moria.png/revision/latest?cb=20181027033459"
+    src="./images/magara.jpeg"
     class="poster"
   />
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores officiis
+  perspiciatis distinctio cum magnam inventore repellendus quisquam optio
+  architecto sint voluptates, quam asperiores earum eligendi cumque aperiam
+  nesciunt. Eius, voluptas. <br />
+  <br />
+  <img src="./images/magara-afis.jpg" class="poster">
+  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores officiis
   perspiciatis distinctio cum magnam inventore repellendus quisquam optio
   architecto sint voluptates, quam asperiores earum eligendi cumque aperiam
   nesciunt. Eius, voluptas. <br />
@@ -143,11 +154,31 @@
   </p>`,
     },
     {
-      title: "Duvar",
+      title: "Apartment",
+      date: "1-30 January",
+      content: `<p>
+        <img
+    src="./images/apartman-afis.jpg"
+    class="poster"
+  />
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores officiis
+  perspiciatis distinctio cum magnam inventore repellendus quisquam optio
+  architecto sint voluptates, quam asperiores earum eligendi cumque aperiam
+  nesciunt. Eius, voluptas. <br />
+  <br />
+  <img src="./images/apartman.png" class="poster">
+  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores officiis
+  perspiciatis distinctio cum magnam inventore repellendus quisquam optio
+  architecto sint voluptates, quam asperiores earum eligendi cumque aperiam
+  nesciunt. Eius, voluptas. <br />
+  </p>`,
+    },
+    {
+      title: "City",
       date: "1-30 December",
       content: `<p>
   <img
-    src="https://s2.best-wallpaper.net/wallpaper/1920x1080/1706/Abstract-cave-lines-creative_1920x1080.jpg"
+    src="./images/duvar-afis.jpg"
     class="poster"
   />
   Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores officiis
@@ -155,26 +186,11 @@
   architecto sint voluptates, quam asperiores earum eligendi cumque aperiam
   nesciunt. Eius, voluptas. <br />
   <br />
-  <img src="https://thumbs.dreamstime.com/b/abstract-light-cave-background-abstract-light-cave-background-rock-texture-157386171.jpg" class="poster">
+  <img src="./images/duvar.jpg" class="poster">
   Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores officiis
   perspiciatis distinctio cum magnam inventore repellendus quisquam optio
   architecto sint voluptates, quam asperiores earum eligendi cumque aperiam
   nesciunt. Eius, voluptas. <br />
-  </p>`,
-    },
-    {
-      title: "Apartman",
-      date: "1-30 January",
-      content: `<p>
-        <img
-    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzKTqy9TVn-DybrovPuxRpBoduYqVx_arpqTi5YW-v5mUBdIYlV41ypKAc9vfR8Qyhmxs&usqp=CAU"
-    class="poster"
-  />
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores officiis
-  perspiciatis distinctio cum magnam inventore repellendus quisquam optio
-  architecto sint voluptates, quam asperiores earum eligendi cumque aperiam
-  nesciunt. Eius, voluptas. <br />
-
   </p>`,
     },
   ];
