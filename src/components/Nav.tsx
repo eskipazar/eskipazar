@@ -4,7 +4,6 @@ type NavProps = {
 };
 
 function Nav({ language, setLanguage }: NavProps) {
-  console.log("language", language);
   const handleLanguageChange = (lang: string) => {
     if (lang === "en") {
       setLanguage("en-US");
