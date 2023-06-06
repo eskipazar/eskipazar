@@ -13,9 +13,9 @@ function App() {
   return (
     <>
       <Nav language={language} setLanguage={setLanguage} />
-      <hr className="border-2 m-1" />
+      <hr className="border-dashed border-2 m-1" />
       <Body language={language} />
-      <hr className="border-2 m-1" />
+      <hr className="border-dashed border-2 m-1" />
 
       <Footer />
     </>
