@@ -1,16 +1,16 @@
 interface Exhibition {
-  titleEN: string
-  titleTR: string
-  date: string
-  contentEN: string
-  contentTR: string
+  titleEN: string;
+  titleTR: string;
+  date: string;
+  contentEN: string;
+  contentTR: string;
 }
 
 export const exhibitions: Exhibition[] = [
   {
-    titleEN: 'Breakwater',
-    titleTR: 'Dalgakıran',
-    date: '19.11 - 12.12 | 2021',
+    titleEN: "Breakwater",
+    titleTR: "Dalgakıran",
+    date: "19.11 - 12.12 | 2021",
     contentEN: `<p>
       <img
         src="../src/images/dalgakiran.jpg"
@@ -34,4 +34,4 @@ export const exhibitions: Exhibition[] = [
 
       Bir kentin hafızası nasıl oluşur, kent ve birey birbirini nasıl bir dönüşüme dahil eder ve dönüşen/sabit kalan şeylerin kent hafızasına etkisi nedir gibi sorular Eski Pazar'ın kurulmasını tetikleyen sorulardı. Sanatçıların işlerinde yakalanan ortaklığın da bu sorular etrafında birlikte düşünmemize olanak tanımasını arzu ediyoruz. <br />`,
   },
-]
+];
