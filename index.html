@@ -151,9 +151,9 @@
 <script>
   const list = [
     {
-      titleEN: 'Breakwater',
-      titleTR: 'Dalgakıran',
-      date: '19.11 - 12.12 | 2021',
+      titleEN: "Breakwater",
+      titleTR: "Dalgakıran",
+      date: "19.11 - 12.12 | 2021",
       contentEN: `<p>
         <img
     src="./images/dalgakiran.jpg"
@@ -177,42 +177,42 @@
 
   Bir kentin hafızası nasıl oluşur, kent ve birey birbirini nasıl bir dönüşüme dahil eder ve dönüşen/sabit kalan şeylerin kent hafızasına etkisi nedir gibi sorular Eski Pazar'ın kurulmasını tetikleyen sorulardı. Sanatçıların işlerinde yakalanan ortaklığın da bu sorular etrafında birlikte düşünmemize olanak tanımasını arzu ediyoruz. <br />`,
     },
-  ]
+  ];
 
   // document.getElementById("next-button").addEventListener("click", handleNext);
   // document.getElementById("prev-button").addEventListener("click", handlePrev);
 
-  let currentKey = 0
-  let language = 'TR'
+  let currentKey = 0;
+  let language = "TR";
 
   function switchToEnglish() {
-    language = 'EN'
-    setContent()
+    language = "EN";
+    setContent();
   }
 
   function switchToTurkish() {
-    language = 'TR'
-    setContent()
+    language = "TR";
+    setContent();
   }
 
   const setContent = () => {
-    const current = list[currentKey]
-    const content = document.getElementById('content')
-    const description = document.getElementById('description')
-    const title = document.getElementById('title')
-    const date = document.getElementById('date')
-    if (content && language === 'TR') {
-      content.innerHTML = current.contentTR
-      description.innerHTML = 'sergi - etkinlik - atölye'
-      title.innerText = current.titleTR
-      date.innerText = current.date
-    } else if (content && language === 'EN') {
-      content.innerHTML = current.contentEN
-      description.innerHTML = 'exhibition - activity - workshop'
-      title.innerText = current.titleEN
-      date.innerText = current.date
+    const current = list[currentKey];
+    const content = document.getElementById("content");
+    const description = document.getElementById("description");
+    const title = document.getElementById("title");
+    const date = document.getElementById("date");
+    if (content && language === "TR") {
+      content.innerHTML = current.contentTR;
+      description.innerHTML = "sergi - etkinlik - atölye";
+      title.innerText = current.titleTR;
+      date.innerText = current.date;
+    } else if (content && language === "EN") {
+      content.innerHTML = current.contentEN;
+      description.innerHTML = "exhibition - activity - workshop";
+      title.innerText = current.titleEN;
+      date.innerText = current.date;
     }
-  }
+  };
 
   // function handleNext(e) {
   //   if (currentKey === 0) {
@@ -231,5 +231,5 @@
   //   setContent();
   // }
 
-  setContent()
+  setContent();
 </script>

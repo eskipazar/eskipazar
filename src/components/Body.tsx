@@ -35,14 +35,14 @@ function Body({ language }: BodyProps) {
           onClick={() => setIndex(index - 1)}
           disabled={index === 0}
         >
-          Previous
+          {language === "en-US" ? "Previous" : "Önceki"}
         </button>
         <button
           className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-1.5 px-4 border border-gray-400 rounded shadow mb-2"
           onClick={() => setIndex(index + 1)}
           disabled={!exhibitions[index + 1]}
         >
-          Next
+          {language === "en-US" ? "Next" : "Sonraki"}
         </button>
       </div>
     </div>
