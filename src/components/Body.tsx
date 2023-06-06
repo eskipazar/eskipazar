@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { exhibitions } from "./exhibitions";
 
 type BodyProps = {
@@ -5,7 +6,9 @@ type BodyProps = {
 };
 
 function Body({ language }: BodyProps) {
-  const index = exhibitions.length - 1;
+  const [index, setIndex]: [number, (value: number) => void] = useState(
+    exhibitions.length - 1
+  );
 
   return (
     <div>
@@ -17,6 +20,7 @@ function Body({ language }: BodyProps) {
         </h1>
         <span>{exhibitions[index].date}</span>
         <div
+          className="mb-2"
           dangerouslySetInnerHTML={{
             __html:
               language === "en-US"
@@ -24,6 +28,22 @@ function Body({ language }: BodyProps) {
                 : exhibitions[index].contentTR,
           }}
         />
+      </div>
+      <div className="flex justify-between">
+        <button
+          className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-1.5 px-4 border border-gray-400 rounded shadow mb-2"
+          onClick={() => setIndex(index - 1)}
+          disabled={index === 0}
+        >
+          Previous
+        </button>
+        <button
+          className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-1.5 px-4 border border-gray-400 rounded shadow mb-2"
+          onClick={() => setIndex(index + 1)}
+          disabled={!exhibitions[index + 1]}
+        >
+          Next
+        </button>
       </div>
     </div>
   );
