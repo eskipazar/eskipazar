@@ -13,7 +13,7 @@ export const exhibitions: Exhibition[] = [
     date: "19.11 - 12.12 | 2021",
     contentEN: `<p>
       <img
-        src="../src/images/dalgakiran.jpg"
+        src="/dalgakiran.jpg"
         class="w-full h-auto"
       />
       <hr class="border-dashed border-2 m-1 w-4 mx-auto my-2" />
@@ -24,7 +24,7 @@ export const exhibitions: Exhibition[] = [
       Eski Pazar was founded upon the questions of how the memory of a city is formed, how the city and the individual transform each other, and what the impacts of fixed and changing elements on the urban memory might be. We want these commonalities captured in the artists' works to allow us to reflect upon these questions together. <br />`,
     contentTR: `<p>
       <img
-      src="../src/images/dalgakiran.jpg"
+      src="/dalgakiran.jpg"
       class="w-full h-auto"
       />
       <hr class="border-dashed border-2 m-1 w-4 mx-auto my-2"  />
