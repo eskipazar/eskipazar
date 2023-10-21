@@ -14,13 +14,10 @@ function Nav({ language, setLanguage }: NavProps) {
 
   return (
     <>
-      <h1 className="text-3xl font-bold">Eski Pazar</h1>
-      <div className="flex justify-between">
-        <h2>
-          {language === "en-US"
-            ? "exhibition - activity - workshop"
-            : "sergi - etkinlik - atölye"}
-        </h2>
+      <div className="flex justify-between items-center">
+        <h1 className="text-3xl font-bold">
+          <img src="/logo.jpg" style={{ height: "110px" }} />
+        </h1>
         <div>
           <button onClick={() => handleLanguageChange("en")}>EN</button>
           <span> | </span>

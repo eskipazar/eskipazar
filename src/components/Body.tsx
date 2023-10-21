@@ -13,7 +13,7 @@ function Body({ language }: BodyProps) {
   return (
     <div>
       <div>
-        <h1>
+        <h1 className="mb-2">
           {language === "en-US"
             ? exhibitions[index].titleEN
             : exhibitions[index].titleTR}
