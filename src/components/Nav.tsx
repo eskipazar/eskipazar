@@ -24,6 +24,18 @@ function Nav({ setLanguage }: NavProps) {
           <button onClick={() => handleLanguageChange("tr")}>TR</button>
         </div>
       </div>
+      <div className="flex justify-between items-center">
+        <div className="flex">
+          <button
+            onClick={() =>
+              window.open("https://forms.gle/niKN88AgrHcZrLrY9", "_blank")
+            }
+            className="hover:bg-gray-100 text-gray-800 font-semibold py-1.5 px-4 rounded mb-2"
+          >
+            Residency Application Form
+          </button>
+        </div>
+      </div>
     </>
   );
 }
