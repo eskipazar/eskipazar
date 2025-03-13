@@ -1,9 +1,10 @@
 type NavProps = {
   language: string;
   setLanguage: (value: string) => void;
+  setSection: (section: string) => void;
 };
 
-function Nav({ setLanguage }: NavProps) {
+function Nav({ language, setLanguage, setSection }: NavProps) {
   const handleLanguageChange = (lang: string) => {
     if (lang === "en") {
       setLanguage("en-US");
@@ -24,18 +25,21 @@ function Nav({ setLanguage }: NavProps) {
           <button onClick={() => handleLanguageChange("tr")}>TR</button>
         </div>
       </div>
-      <div className="flex justify-between items-center">
-        <div className="flex">
-          <button
-            onClick={() =>
-              window.open("https://forms.gle/niKN88AgrHcZrLrY9", "_blank")
-            }
-            className="hover:bg-gray-100 text-gray-800 font-semibold py-1.5 px-4 rounded mb-2"
-          >
-            Residency Application Form
-          </button>
-        </div>
-      </div>
+      <nav className="flex justify-evenly">
+        <button onClick={() => setSection("body")}>
+          {language === "tr-TR" ? "Sergiler" : "Exibitions"}
+        </button>
+        <button onClick={() => setSection("about")}>
+          {language === "tr-TR" ? "Eskipazar Nedir?" : "Whats Eskipazar?"}
+        </button>
+        <button
+          onClick={() =>
+            window.open("https://forms.gle/niKN88AgrHcZrLrY9", "_blank")
+          }
+        >
+          {language === "tr-TR" ? "Rezidans" : "Residency"}
+        </button>
+      </nav>
     </>
   );
 }

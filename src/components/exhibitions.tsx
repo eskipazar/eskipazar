@@ -121,4 +121,33 @@ You are all invited to the opening on August 11th.<br />
       11 Ağustos'ta gerçekleşecek olan açılışa hepiniz davetlisiniz.<br />
       `,
   },
+  {
+    titleEN: "Bir sır, Bin Soru",
+    titleTR: "Bir sır, Bin Soru",
+    date: "01.12 - 15.01 | 2024",
+    contentEN: `<p>
+      <img
+      src="/bsbs.jpeg"
+      class="w-full h-auto"
+      />
+      <hr class="border-dashed border-2 m-1 w-4 mx-auto my-2"  />
+Eskipazar’ın başlattığı “Anonimler için Açık Çağrı" süreci, Bir Sır Bin Soru sergisiyle son halini aldı. 20 Aralık saat 19.00’da açılışı gerçekleşecek olan sergi, yaratıcı süreçte kimliksizleşmek ve kimliksizleştirmek üzerine bir deneme sunuyor. <br /><br />
+
+Sergi, sanatçıların isimlerini açıklamadan, üretici ile izleyici arasındaki alışılmış yargı bağını ortadan kaldırmayı hedefliyor. Bu yaklaşım ile her bir eseri yalnızca kendi soruları üzerinden algılamaya ve anlamaya yönlendirirken, sergi bütünü içerisinde yeni ve kimliksiz bir bağ örüyor. 
+<br /><br />
+"Eskiler aramaz, iz sürerdi" şiarıyla yola çıkan Bir Sır Bin Soru, cevapları aramaktan çok, doğru soruları sormaya çağırıyor. <br /><br />
+      `,
+    contentTR: `<p>
+      <img
+      src="/bsbs.jpeg"
+      class="w-full h-auto"
+      />
+      <hr class="border-dashed border-2 m-1 w-4 mx-auto my-2"  />
+Eskipazar’ın başlattığı “Anonimler için Açık Çağrı" süreci, Bir Sır Bin Soru sergisiyle son halini aldı. 20 Aralık saat 19.00’da açılışı gerçekleşecek olan sergi, yaratıcı süreçte kimliksizleşmek ve kimliksizleştirmek üzerine bir deneme sunuyor. <br /><br />
+
+Sergi, sanatçıların isimlerini açıklamadan, üretici ile izleyici arasındaki alışılmış yargı bağını ortadan kaldırmayı hedefliyor. Bu yaklaşım ile her bir eseri yalnızca kendi soruları üzerinden algılamaya ve anlamaya yönlendirirken, sergi bütünü içerisinde yeni ve kimliksiz bir bağ örüyor. 
+<br /><br />
+"Eskiler aramaz, iz sürerdi" şiarıyla yola çıkan Bir Sır Bin Soru, cevapları aramaktan çok, doğru soruları sormaya çağırıyor. <br /><br />
+      `,
+  },
 ];
